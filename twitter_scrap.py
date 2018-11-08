@@ -2,10 +2,10 @@ import tweepy
 import pandas as pd
 import datetime
 
-consumer_key = "hHMCw0iiIXzNk5ew1cemRFTad"
-consumer_secret = "HKTNdmMJMuNeqBRvvYG00mGyEdaJrFuNFpLBXuxazZiVyDJjWf"
-access_token = "86298339-JWhNHltJwZD0UoVPIAEgm4q6wsmk5WdrKsF42KgPG"
-access_token_secret = "mKaxrBm1PYpH0NVIqLxOpeSjb22G3fRuVKXbLVpJzjt1f"
+consumer_key = "<put_consumer_key_here>"
+consumer_secret = "<put_consumer_secret_here"
+access_token = "<put_access_token_here>"
+access_token_secret = "<put_access_token_secret_here>"
 
 # Creating the authentication object
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
