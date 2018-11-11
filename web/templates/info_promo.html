@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Promotion Collector</title>
+
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                Info Promo
+            </h3>
+        </div>
+    </div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							Username
+						</th>
+						<th>
+							Tweet
+						</th>
+						<th>
+							Url
+						</th>
+						<th>
+							Discount
+                        </th>
+						<th>
+							Price
+						</th>                        
+					</tr>
+				</thead>
+				<tbody>
+                    {% for idx,tweet in info_promo.iterrows() %}
+					<tr>
+						<td>
+							{{ tweet['username'] }}
+						</td>
+						<td>
+                            {{ tweet['tweet'] }}
+						</td>
+						<td>
+                            {{ tweet['urls'] }}
+						</td>
+						<td>
+                            {{ tweet['discount'] }}
+                        </td>
+						<td>
+                            {{ tweet['price'] }}
+						</td>                        
+                    </tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
